@@ -27,7 +27,7 @@ class Algo
      * @param  string $text text to count with
      * @return int words count
      */
-    private static function countTextWords(string $text) : int
+    public static function countTextWords(string $text) : int
     {
         $words = 0; // total words found
 
