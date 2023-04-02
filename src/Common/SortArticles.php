@@ -8,7 +8,7 @@ class SortArticles
      * Sorts array of articles desc by updatedAt field
      *
      * @param  array $articles array of articles
-     * @return araay array sorted desc by updatedAt field
+     * @return array array sorted desc by updatedAt field
      */
     public static function sortByUpdatedAt($articles) : array
     {
