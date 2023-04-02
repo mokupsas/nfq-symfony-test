@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Sort\SortArticles;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,7 +14,7 @@ class IndexController extends AbstractController
     public function list(ArticleRepository $articleRepository): Response
     {
         return $this->render('pages/index.html.twig', [
-            'articles' => $articleRepository->findAll(),
+            'articles' => SortArticles::sortByUpdatedAt( $articleRepository->findAll() )
         ]);
     }
 }
