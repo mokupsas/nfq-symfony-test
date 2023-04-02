@@ -8,7 +8,7 @@
                     <h5>Edit article</h5>
                     <h1 class="fw-bold">{{ article.title }}</h1>
                     <p>{{ article.updatedAt|date('Y-m-d H:i:s') }}</p>
-                    <p class="text-muted">X mins</p>
+                    <p class="text-muted">{{ readTime(article) }} mins</p>
                 </div>
 
                 {# <img class="img-fluid" src="{{ article.image }}" alt=""> #}
