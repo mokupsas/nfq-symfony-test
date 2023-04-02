@@ -35,6 +35,12 @@ class EditController extends AbstractController
 
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
+                $article = $form->getData();
+                
+                $dbArticle = $entityManager->getRepository(Article::class)->find($article->getId());
+                $dbArticle->setUpdatedAt(new \DateTime());
+                $entityManager->flush();
+    
                 $notification = 'Successfully edited!';
             }
 
