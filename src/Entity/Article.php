@@ -23,6 +23,9 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $updateAt = null;
+
     /**
      * @return int|null
      */
@@ -77,5 +80,17 @@ class Article
     public function setImage(?string $image): void
     {
         $this->image = $image;
+    }
+
+    public function getUpdateAt(): ?\DateTimeInterface
+    {
+        return $this->updateAt;
+    }
+
+    public function setUpdateAt(?\DateTimeInterface $updateAt): self
+    {
+        $this->updateAt = $updateAt;
+
+        return $this;
     }
 }
