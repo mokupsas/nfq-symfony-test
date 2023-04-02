@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Sort\SortArticles;
+use App\Common\SortArticles;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

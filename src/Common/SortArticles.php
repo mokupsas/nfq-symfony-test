@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sort;
+namespace App\Common;
 
 class SortArticles
 {    
