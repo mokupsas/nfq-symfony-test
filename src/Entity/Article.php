@@ -87,7 +87,7 @@ class Article
         return $this->updatedAt;
     }
 
-    public function setUpdateAt(?\DateTimeInterface $updateAt): self
+    public function setUpdatedAt(?\DateTimeInterface $updateAt): self
     {
         $this->updatedAt = $updateAt;
 
